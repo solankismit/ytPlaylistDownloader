@@ -1,0 +1,22 @@
+<!--append index.html and then add list out all the videos of playlist with checkbox and thumbnail and title -->
+
+{% extends "index.html" %}
+{% block content %}
+<!-- Download Selected and Download all button -->
+<div class="content">
+    <form action="{{ url_for('downloadSelected') }}" method="POST">
+        <input type="submit" value="Download Selected">
+        <input type="button" value="Download All" onclick="window.location.href='{{ url_for('downloadAll') }}'">
+        <!-- Dropdown to select quality of video -->
+
+        
+    </div>
+    {% for video in videos %}
+    <div class="content" style="align-content: flex-start;">
+        <img src="{{ video.thumbnail_url }}" alt="thumbnail" height="80px" width="80px" >
+        <input type="checkbox" name="video" value="{{ video.video_id }}">
+        <label for="video">{{ video.title }}</label>
+    </div>
+    {% endfor %}
+</form>
+    {% endblock %}
