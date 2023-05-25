@@ -19,6 +19,13 @@ from pytube import Playlist
 from flask import Flask, render_template, request, redirect, url_for,Response,send_file
 from pytube import YouTube
 from io import BytesIO
+
+
+import pytube
+import flask
+
+print(pytube.__version__)
+print(flask.__version__)
 import os
 
 app = Flask(__name__)
