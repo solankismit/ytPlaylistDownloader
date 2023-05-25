@@ -3,8 +3,8 @@
 {% extends "index.html" %}
 {% block content %}
 <!-- Download Selected and Download all button -->
-<div class="content">
-    <form action="{{ url_for('downloadSelected') }}" method="POST">
+<form action="{{ url_for('downloadSelected') }}" method="POST">
+<div class="contentHead">
         <input type="submit" value="Download Selected">
         <input type="button" value="Download All" onclick="window.location.href='{{ url_for('downloadAll') }}'">
         <!-- Dropdown to select quality of video -->
