@@ -24,8 +24,6 @@ from io import BytesIO
 import pytube
 import flask
 
-print(pytube.__version__)
-print(flask.__version__)
 import os
 
 app = Flask(__name__)
